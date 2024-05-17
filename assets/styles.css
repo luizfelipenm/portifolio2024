@@ -27,6 +27,8 @@ h1 {
   width: 150px;
   /* Ajuste o tamanho da foto conforme necessário */
   height: 150px;
+
+  object-fit: cover;
 }
 
 /* Estilos do conteúdo principal */
