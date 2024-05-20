@@ -66,6 +66,31 @@
       <li>AWS Academy Graduate - AWS Academy Cloud Foundations</li>
     </ul>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+  // Animação suave de rolagem para links de âncora
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Efeito de destaque ao passar o mouse sobre os itens da lista de habilidades
+  const habilidades = document.querySelectorAll('.container h2 + ul li');
+  habilidades.forEach(habilidade => {
+    habilidade.addEventListener('mouseenter', () => {
+      habilidade.style.backgroundColor = '#f0f0f0';
+      habilidade.style.transition = 'background-color 0.3s';
+    });
+    habilidade.addEventListener('mouseleave', () => {
+      habilidade.style.backgroundColor = '';
+    });
+  });
+});
+  </script>
   <footer>
     &copy; 2024 Luiz Felipe Nascimento Mota
   </footer>
